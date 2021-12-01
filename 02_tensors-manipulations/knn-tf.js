@@ -1,7 +1,7 @@
 /*
 KNN algorithm using Tensorflow of predict house price depends on its location (latitude, longitude)
 1. Find distance between features (lat, long) and prediction point
-2. Sort from lowest point to greatest
+2. Sort from lowest distance to greatest
 3. Take the top k records
 4. Average the label value (price) of those top k records
 */
