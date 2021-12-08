@@ -31,3 +31,7 @@ KNN algorithm using Tensorflow of predict houses prices depends on their locatio
 2. Sort from lowest distance to greatest
 3. Take the top k records
 4. Average the label value (price) of those top k records
+
+# 04 Regression
+
+Linear Regression using Gradient descent algorithm with data as arrays of arrays

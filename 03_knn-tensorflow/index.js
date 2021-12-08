@@ -10,7 +10,7 @@ let { features, labels, testFeatures, testLabels } = loadCSV(
     shuffle: true, //shuffle csv data to avoid taking test/training data sets of specific area which will bias the result
     splitTest: 10, //split data into test set (10) and training set
     dataColumns: ["lat", "long", "sqft_lot", "sqft_living"], //extract features columns that we will include in knn (most important features that impact the house price)
-    labelColumns: ["price"], //extract labels columns that we need
+    labelColumns: ["price"], //extract labels columns that we will use
   }
 );
 

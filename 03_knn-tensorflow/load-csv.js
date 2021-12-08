@@ -2,7 +2,7 @@ const fs = require("fs");
 const _ = require("lodash");
 const shuffleSeed = require("shuffle-seed");
 
-//extract colums that we need
+//extract colums that we will use
 function extractColumns(data, columnNamesArr) {
   const headers = _.first(data);
   const indexes = _.map(columnNamesArr, (column) => headers.indexOf(column));
@@ -45,7 +45,7 @@ module.exports = function loadCSV(
     });
   });
 
-  //extract colums that we need
+  //extract colums that we will use
   let labels = extractColumns(data, labelColumns);
   data = extractColumns(data, dataColumns);
 
