@@ -93,25 +93,31 @@ console.log(
 const slice2 = tensorB.slice([0, 1], [-1, -1]);
 slice2.print();
 
-/* TENSOR CONCARENATION */
-console.log("concat tensorB and tensorC by row");
+/* TENSOR CONCARENATION ALONG AXIS */
+console.log(
+  "concat tensorB and tensorC along row axis (default axis is 0 (the first dim))"
+);
 const concatByRow = tensorB.concat(tensorC, 0);
 concatByRow.print();
 
-console.log("concat tensorB and tensorC by column");
+console.log("concat tensorB and tensorC along column axis");
 const concatByCol = tensorB.concat(tensorC, 1);
 concatByCol.print();
 
 /* SUM VALUE ALONG AXIS */
-console.log("tensorB: sum of each column");
+console.log(
+  "tensorB: sum data of each column (along row axis - first dimension)"
+);
 const sumByRow = tensorB.sum(0);
 sumByRow.print();
 
-console.log("tensorB: sum of each column and keep dimensions");
+console.log("tensorB: sum data of each column and keep dimensions");
 const sumByRowkeepDim = tensorB.sum(0, true);
 sumByRowkeepDim.print();
 
-console.log("tensorB: sum of each row");
+console.log(
+  "tensorB: sum data of each row (along column axis - second dimension)"
+);
 const sumByCol = tensorB.sum(1);
 sumByCol.print();
 

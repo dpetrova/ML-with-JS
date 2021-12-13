@@ -34,4 +34,11 @@ KNN algorithm using Tensorflow of predict houses prices depends on their locatio
 
 # 04 Regression
 
-Linear Regression using Gradient descent algorithm with data as arrays of arrays
+y = b + x1m1 + x2m2 + ... + xnmn
+
+Linear Regression using Gradient descent algorithm with TensorFlow
+
+1. Pick starting values of coefficients "b" and "m"
+2. Calculate the slope of MSE with respect to "b" and "m"
+3. Multiply the slope by learning rate
+4. Update coefficients "b" and "m"
