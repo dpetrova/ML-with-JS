@@ -1,7 +1,7 @@
 /* 
-Use Multivariate Linear Regression with Tensorflow 
-to find the relation between one dependend variable and many independent variables:
+Multivariate Linear Regression with Tensorflow to find the relation between one dependend variable and many independent variables:
 y = b + m1*x1 + m2*x2 + ... + mn*xn 
+and predict continuous values
 */
 
 const tf = require("@tensorflow/tfjs");
@@ -56,7 +56,7 @@ class LinearRegression {
     return features.sub(mean).div(variance.pow(0.5));
   }
 
-  /* calculate slope of MSE with respect to "m" and "b" = Featues * ((Features * Weights) - Labels) / n */
+  /* calculate slope of MSE with respect to "m" and "b" = (FeaturesT * ((Features * Weights) - Labels)) / n */
   gradientDescent(features, labels) {
     //^y = (Features * Weights)
     const labelsEstimates = features.matMul(this.weights); //matMul -> matrix multiplication
@@ -109,7 +109,7 @@ class LinearRegression {
     }
   }
 
-  /* calculate Coefficient of Determination that show how good a fit is (use test data to make predictions about observations with known labels) */
+  /* calculate Coefficient of Determination R^2 = 1 - SSres/SStot, that show how good a fit is (use test data to make predictions about observations with known labels) */
   test(testFeatures, testLabels) {
     //create a tensor of features, append column of "1" and standardize data
     testFeatures = this.processFeatures(testFeatures);

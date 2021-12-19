@@ -27,7 +27,7 @@ module.exports = function loadCSV(
   //get headers
   const headers = _.first(data);
 
-  //convert and parse data except the header
+  //convert or parse data except the header
   data = _.map(data, (row, index) => {
     if (index === 0) {
       return row;

@@ -34,11 +34,22 @@ KNN algorithm using Tensorflow of predict houses prices depends on their locatio
 
 # 04 Regression
 
+### Linear Regression using Gradient descent algorithm with TensorFlow
+
 y = b + x1m1 + x2m2 + ... + xnmn
 
-Linear Regression using Gradient descent algorithm with TensorFlow
-
 1. Pick starting values of coefficients "b" and "m"
-2. Calculate the slope of MSE with respect to "b" and "m"
+2. Calculate the slope of MSE with respect to "b" and "m's"
 3. Multiply the slope by learning rate
-4. Update coefficients "b" and "m"
+4. Update coefficients "b" and "m's"
+
+### Logistic Regression for Binary Classification
+
+sigmoid equation:
+y = 1 / (1 + e^-(m.x + b))
+
+1. Encode label values as eithr "0" or "1"
+2. Pick starting values of coefficients "b" and "m's"
+3. Calculate the slope of Cross Entropy (metric of how bad we guessed)
+4. Multiply the slope by learning rate
+5. Update coefficients "b" and "m's"
