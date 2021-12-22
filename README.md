@@ -45,11 +45,26 @@ y = b + x1m1 + x2m2 + ... + xnmn
 
 ### Logistic Regression for Binary Classification
 
+Use Marginal Probability Distribution -> consider one possible output case in isolation
+
 sigmoid equation:
 y = 1 / (1 + e^-(m.x + b))
 
-1. Encode label values as eithr "0" or "1"
+1. Encode label values as either "0" or "1"
 2. Pick starting values of coefficients "b" and "m's"
-3. Calculate the slope of Cross Entropy (metric of how bad we guessed)
+3. Calculate the slope of Cross Entropy with respect to "b" and "m's"
 4. Multiply the slope by learning rate
 5. Update coefficients "b" and "m's"
+
+### Logistic Regression for Multinominal Classification
+
+Use Conditional Probability Distribution -> consider all possible output cases together
+
+softmax equation:
+y = e^(m*x + b) / Sum(e^(m*x + bk))
+
+1. Create a column for every possible label value and encode label value with "1" if label value match column value, otherwise encode with "0"
+2. Pick starting values of coefficients "b's" and "m's"
+3. Calculate the slope of Cross Entropy with respect to "b" and "m's"
+4. Multiply the slope by learning rate
+5. Update coefficients "b's" and "m's"

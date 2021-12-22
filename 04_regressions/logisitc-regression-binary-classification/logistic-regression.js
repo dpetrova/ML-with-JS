@@ -1,8 +1,8 @@
 /* 
 BINARY CLASSIFICATION
-Logistic Regression with Tensorflow to find the sigmoid equation
+Logistic Regression to find the sigmoid equation (probability of being "1" label)
 y = 1 / (1 + e^-(m*x + b))
-and predict discrete values
+and predict discrete binary values
 */
 
 const tf = require("@tensorflow/tfjs");
@@ -16,7 +16,7 @@ class LogisticRegression {
     //create a tensor of labels data
     this.labels = tf.tensor(labels);
 
-    // override default learning_rate and max_number_of_iterations (times that run gradientDescent algorithm)
+    // override default learning_rate, max_number_of_iterations and decision_boundary
     this.options = Object.assign(
       { learningRate: 0.1, iterations: 1000, decisionBoundary: 0.5 }, //decisionBoundary is boundary of probability below/above which label is accepted 0/1
       options

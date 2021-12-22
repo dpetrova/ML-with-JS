@@ -1,3 +1,8 @@
+/*
+Find a relationship between horsepower, weight and engine displacement of a vehicle and MILES_PER_GALLON 
+MILES_PER_GALLON = b + m1*HORSE_POWER + m2*WEIGHT + m3*DISPLACEMENT 
+*/
+
 require("@tensorflow/tfjs-node");
 const tf = require("@tensorflow/tfjs");
 const loadCSV = require("../load-csv");
